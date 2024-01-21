@@ -29,7 +29,7 @@ namespace Music_Player
 
             // 加载字体图标库
             PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile("./resources/iconfont.ttf");
+            pfc.AddFontFile("./Resources/iconfont.ttf");
             // 给按钮指定图标
             this.button2.Text = "\ue6a7";
             this.button2.Font = new Font(pfc.Families[0], 13);
@@ -48,7 +48,7 @@ namespace Music_Player
 
             // 初始化歌曲列表数据
             // 获取Json文件数据
-            var jsonStr = System.IO.File.ReadAllText("song.json");
+            var jsonStr = System.IO.File.ReadAllText("./songs.json");
             // 反序列化 ：从Json到List集合的过程
             SongList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<SongModel>>(jsonStr);
             this.dataGridView1.AutoGenerateColumns = false;
